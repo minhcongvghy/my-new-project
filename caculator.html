@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Caculator</h1>
+
+<input type="text" id="thefirst">
+<input type="text" id="thesecond">
+<br><br>
+<button onclick="hamtong()">Addition(+)</button>
+<button onclick="hamhieu()">Subtration(-)</button>
+<button onclick="hamtich()">Multiplication(X)</button>
+<button onclick="hamthuong()">Division(/)</button><br><br>
+<div id="idtong"></div>
+<div id="idhieu"></div>
+<div id="idtich"></div>
+<div id="idthuong"></div>
+<script>
+    function hamtong() {
+        let first = parseFloat(document.getElementById("thefirst").value)
+        let second = parseFloat(document.getElementById("thesecond").value)
+        let tong = first + second
+        document.getElementById("idtong").innerHTML = "Result Addition: " + tong
+    }
+
+    function hamhieu() {
+        let first = parseFloat(document.getElementById("thefirst").value)
+        let second = parseFloat(document.getElementById("thesecond").value)
+        let hieu = first - second
+        document.getElementById("idhieu").innerHTML = "Result Subtration: " + hieu
+    }
+
+    function hamtich() {
+        let first = parseFloat(document.getElementById("thefirst").value)
+        let second = parseFloat(document.getElementById("thesecond").value)
+        let tich = first * second
+        document.getElementById("idtich").innerHTML = "Result Multiplication: " + tich
+    }
+
+    function hamthuong() {
+        let first = parseFloat(document.getElementById("thefirst").value)
+        let second = parseFloat(document.getElementById("thesecond").value)
+        let thuong = first / second
+        document.getElementById("idthuong").innerHTML = "Result Division: " + thuong
+    }
+</script>
+
+
+</body>
+</html>
