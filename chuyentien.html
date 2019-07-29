@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p><b>Amount</b></p>
+<input type="text" id="thefirst">
+<p><b>From Currency</b></p>
+<select name="country" id="fcountry">
+    <option value="vietnam">VietNam</option>
+    <option value="usd">USD</option>
+</select>
+<p><b>To Currency</b></p>
+<select name="country" id="tcountry">
+    <option value="usd">USD</option>
+    <option value="vietnam">VietNam</option>
+</select>
+<br><br>
+<button onclick="hamTinh()">Convert</button>
+<br><br>
+<div id="ketqua1"></div>
+<div id="ketqua2"></div>
+<script>
+function hamTinh() {
+    let first = parseInt(document.getElementById("thefirst").value)
+    let second = document.getElementById("fcountry").value
+    let third = document.getElementById("tcountry").value
+    if (second=="usd" && third=="vietnam") {
+        let kq1 = first * 23000
+        document.getElementById("ketqua1").innerHTML = "Result: "+ kq1
+    } else if (second=="vietnam" && third=="usd") {
+        let kq2 = first / 23000
+        document.getElementById("ketqua2").innerHTML = "Result: "+ kq2
+    }
+}
+</script>
+</body>
+</html>
