@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        form {
+            width: 186px;
+            margin: auto;
+        }
+        table {
+            border: 3px solid black;
+        }
+    </style>
+</head>
+<body>
+<h1 style="text-align: center;">Caculator</h1>
+<form>
+    <table>
+        <tr>
+            <td colspan="5"><input id="display" type="text"></td>
+        </tr>
+        <tr>
+            <td style="text-align: center"><button type="button" onclick="showNumber(this.value)" value="7">7</button></td>
+            <td style="text-align: center"><button type="button" onclick="showNumber(this.value)" value="8">8</button></td>
+            <td style="text-align: center"><button type="button" onclick="showNumber(this.value)" value="9">9</button></td>
+            <td style="text-align: center"><button type="button" onclick="showNumber(this.value)" value="+">+</button></td>
+        </tr>
+        <tr>
+            <td style="text-align: center"><button type="button" onclick="showNumber(this.value)" value="4">4</button></td>
+            <td style="text-align: center"><button type="button" onclick="showNumber(this.value)" value="5">5</button></td>
+            <td style="text-align: center"><button type="button" onclick="showNumber(this.value)" value="6">6</button></td>
+            <td style="text-align: center"><button type="button" onclick="showNumber(this.value)" value="-">-</button></td>
+        </tr>
+        <tr>
+            <td style="text-align: center"><button type="button" onclick="showNumber(this.value)" value="1">1</button></td>
+            <td style="text-align: center"><button type="button" onclick="showNumber(this.value)" value="2">2</button></td>
+            <td style="text-align: center"><button type="button" onclick="showNumber(this.value)" value="3">3</button></td>
+            <td style="text-align: center"><button type="button" onclick="showNumber(this.value)" value="*">x</button></td>
+        </tr>
+        <tr>
+            <td style="text-align: center"><button type="button" onclick="clearDisplay()" value="C">C</button></td>
+            <td style="text-align: center"><button type="button" onclick="showNumber(this.value)" value="0">0</button></td>
+            <td style="text-align: center"><button type="button" onclick="ketQua()" value="=">=</button></td>
+            <td style="text-align: center"><button type="button" onclick="showNumber(this.value)" value="/">/</button></td>
+        </tr>
+    </table>
+</form>
+<script>
+    function showNumber(number) {
+        let myDisplay = document.getElementById('display');
+        myDisplay.value += number;
+    }
+
+    function clearDisplay() {
+        let myDisplay = document.getElementById('display');
+        myDisplay.value = "";
+    }
+    function ketQua() {
+        let myDisplay = document.getElementById('display');
+        myDisplay.value = eval(myDisplay.value)
+    }
+</script>
+</body>
+</html>
